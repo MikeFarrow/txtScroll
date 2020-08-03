@@ -41,6 +41,13 @@ class AWord {
       this.cnt += 1;
       this.initChar.done = false;
     }
+    if (this.cnt < this.word.length) {
+      this.initChar.calc();
+    } else if (this.cnt === this.word.length) {
+      if (this.initChar.x > 50) {
+        this.initChar.calc();
+      }
+    }
     this.initChar.draw();
   }
 }
@@ -53,7 +60,8 @@ class AChar {
     this.moveDir = -9;
     this.done = false;
   }
-  draw() {
+
+  calc() {
     this.x += this.moveDir;
     if (this.x < 1) {
       this.moveDir *= -1;
@@ -61,7 +69,9 @@ class AChar {
       this.moveDir *= -1;
       this.done = true;
     }
+  }
 
+  draw() {
     textStyle(BOLD);
     textSize(140);
     text(this.char, this.x, this.y);
