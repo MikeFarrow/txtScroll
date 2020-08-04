@@ -1,7 +1,7 @@
 {
-  "name": "txt-animation-mike",
+  "name": "txtscroll-in-github",
   "version": "1.0.0",
-  "description": "Nice codesandbox P5 starter that hints at P5 syntax",
+  "description": "",
   "main": "sketch.js",
   "scripts": {
     "start": "serve",
